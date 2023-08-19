@@ -74,3 +74,94 @@
 
 - Get help on a specific command: `git help <command>`
 - Get help on Git usage: `git help -g`
+
+
+# Comprehensive Git Commands Cheat Sheet
+
+## Configuration
+
+- Set your name: `git config --global user.name "Your Name"`
+- Set your email: `git config --global user.email "your.email@example.com"`
+- Configure default text editor: `git config --global core.editor "editor-command"`
+- Configure line ending settings: `git config --global core.autocrlf <true/false/input>`
+
+## Repository Initialization
+
+- Initialize a new repository: `git init`
+- Clone a repository: `git clone <repository-url>`
+
+## Basic Workflow
+
+- Check repository status: `git status`
+- Stage changes: `git add <file>`
+- Unstage changes: `git restore --staged <file>`
+- Commit changes: `git commit -m "Commit message"`
+- Push commits to a remote: `git push <remote-name> <branch-name>`
+- Pull changes from a remote: `git pull <remote-name> <branch-name>`
+
+## Branching and Merging
+
+- Create a branch: `git branch <branch-name>`
+- Switch to a branch: `git checkout <branch-name>`
+- Create and switch: `git checkout -b <branch-name>`
+- Merge branches: `git merge <branch-name>`
+- Delete a branch: `git branch -d <branch-name>`
+- List branches: `git branch`
+
+## Remote Repositories
+
+- Add a remote: `git remote add <remote-name> <remote-url>`
+- List remotes: `git remote -v`
+- Fetch changes: `git fetch <remote-name>`
+- Pull changes: `git pull <remote-name> <branch-name>`
+- Push commits: `git push <remote-name> <branch-name>`
+- Remove remote: `git remote remove <remote-name>`
+
+## Stashing Changes
+
+- Stash changes: `git stash`
+- Apply stashed changes: `git stash apply`
+- List stashes: `git stash list`
+- Clear stashes: `git stash clear`
+
+## History and Changes
+
+- View commit history: `git log`
+- View changes in commit: `git show <commit-hash>`
+- Compare commits: `git diff <commit1> <commit2>`
+- Compare staging with last commit: `git diff --staged`
+- View commit statistics: `git log --stat`
+- Show commits by author: `git log --author="Author Name"`
+
+## Undoing Changes
+
+- Discard local changes: `git restore <file>`
+- Restore file to specific commit: `git checkout <commit-hash> <file>`
+- Revert a commit: `git revert <commit-hash>`
+- Reset to commit, preserving changes: `git reset <commit-hash>`
+- Reset to commit, discard changes: `git reset --hard <commit-hash>`
+
+## Tagging
+
+- Create a tag: `git tag <tag-name>`
+- Create annotated tag: `git tag -a <tag-name> -m "Tag message"`
+- List tags: `git tag`
+- Push tags to remote: `git push <remote-name> --tags`
+- Delete a tag: `git tag -d <tag-name>`
+- Delete a remote tag: `git push <remote-name> --delete <tag-name>`
+
+## Git Configuration
+
+- Show configuration: `git config --list`
+- Show local configuration: `git config --local --list`
+- Show global configuration: `git config --global --list`
+
+## Git Ignore
+
+- Create a .gitignore file: `touch .gitignore`
+- Add files/directories to ignore: Edit `.gitignore` and add entries
+
+## More Help
+
+- Get help on a command: `git help <command>`
+- Get general help: `git help -g`
