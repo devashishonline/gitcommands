@@ -1,17 +1,76 @@
-## Commands
+# Git Commands Cheat Sheet
 
-repo -> repository
+## Configuring Git
 
-clone -> bring a repo down from the internet (remote repository like Github) to your local machine
+- Configure your name: `git config --global user.name "Your Name"`
+- Configure your email: `git config --global user.email "your.email@example.com"`
+- Set your preferred text editor: `git config --global core.editor "editor-command"`
 
-add -> track your files and changes with Git
+## Creating Repositories
 
-commit -> save your changes into Git
+- Initialize a new repository: `git init`
+- Clone a repository: `git clone <repository-url>`
 
-push -> push your changes to your remote repo on Github (or another website)
+## Basic Workflow
 
-pull -> pull changes down from the remote repo to your local machine
+- Check the status of your repository: `git status`
+- Add changes to the staging area: `git add <file>`
+- Remove changes from the staging area: `git restore --staged <file>`
+- Commit changes: `git commit -m "Commit message"`
+- Push commits to a remote repository: `git push <remote-name> <branch-name>`
+- Pull changes from a remote repository: `git pull <remote-name> <branch-name>`
 
-status -> check to see which files are being tracked or need to be commited
+## Branching and Merging
 
-init -> use this command inside of your project to turn it into a Git repository and start using Git with that codebase
+- Create a new branch: `git branch <branch-name>`
+- Switch to a branch: `git checkout <branch-name>`
+- Create and switch to a new branch: `git checkout -b <branch-name>`
+- Merge branches: `git merge <branch-name>`
+- Delete a branch: `git branch -d <branch-name>`
+
+## Remote Repositories
+
+- Add a remote repository: `git remote add <remote-name> <remote-url>`
+- List remote repositories: `git remote -v`
+- Fetch changes from a remote repository: `git fetch <remote-name>`
+- Pull changes from a remote repository: `git pull <remote-name> <branch-name>`
+- Push commits to a remote repository: `git push <remote-name> <branch-name>`
+
+## Stashing Changes
+
+- Stash changes: `git stash`
+- Apply stashed changes: `git stash apply`
+- List stashes: `git stash list`
+- Clear stashes: `git stash clear`
+
+## Viewing History
+
+- View commit history: `git log`
+- View changes in a commit: `git show <commit-hash>`
+- View changes between commits: `git diff <commit1> <commit2>`
+- View changes in the staging area: `git diff --staged`
+
+## Undoing Changes
+
+- Discard local changes in a file: `git restore <file>`
+- Restore a file to a specific commit: `git checkout <commit-hash> <file>`
+- Revert a commit: `git revert <commit-hash>`
+- Reset to a specific commit: `git reset --hard <commit-hash>`
+
+## Tagging
+
+- Create a tag: `git tag <tag-name>`
+- Create an annotated tag: `git tag -a <tag-name> -m "Tag message"`
+- List tags: `git tag`
+- Push tags to a remote repository: `git push <remote-name> --tags`
+
+## Git Configuration
+
+- Show Git configuration: `git config --list`
+- Show repository-specific configuration: `git config --local --list`
+- Show global configuration: `git config --global --list`
+
+## More Help
+
+- Get help on a specific command: `git help <command>`
+- Get help on Git usage: `git help -g`
